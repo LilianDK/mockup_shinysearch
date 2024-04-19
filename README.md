@@ -44,14 +44,17 @@ What things you need to run the software:
 
 # Front-End
 
-**Step 1: Download the Docker image (=application)**
-```uvicorn main:app --host 0.0.0.0 --port 8001 --reload```
+**Step 1: Run FastAPI**
+```python
+uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+```
+The app will run at localhost:8001.
 
-**Step 2: Start the downloaded Docker image (=application)** 
+**Step 2: Run UI** 
 ```python
 shiny run shinysearch/app.py
 ```
-The app will run at localhost:8000
+The app will run at localhost:8000.
 
 ## Deployment using Docker <a name = "deployment2"></a>
   
