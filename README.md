@@ -48,13 +48,15 @@ What things you need to run the software:
 ```python
 uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 ```
-The app will run at localhost:8001.
+> [!NOTE]
+> The app will run at localhost:8001.
 
 **Step 2: Run UI** 
 ```python
 shiny run shinysearch/app.py
 ```
-The app will run at localhost:8000.
+> [!NOTE]
+> The app will run at localhost:8000.
 
 ## Deployment using Docker <a name = "deployment2"></a>
   
