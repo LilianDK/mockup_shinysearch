@@ -35,9 +35,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 What things you need to run the software:
-- [Install Docker in your environment](https://docs.docker.com/engine/install/) or [Rancher](https://www.rancher.com/)
-- Aleph Alpha Account or Token (see image description below)
-![alt text](https://github.com/LilianDK/llm-playground/blob/main/README_PICS/AA_Acount.png)
 
 ## Configuration <a name="configuration"></a>
 
