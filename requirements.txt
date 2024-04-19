@@ -2,3 +2,5 @@ python-dotenv
 pandas
 fastapi
 shiny
+ibm-watson>=7.0.0
+matplotlib
