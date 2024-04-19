@@ -35,8 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 What things you need to run the software:
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+
 ## Configuration <a name="configuration"></a>
 
 ## 🚀 Deployment or usage of the application <a name = "deployment0"></a>
@@ -49,8 +48,10 @@ What things you need to run the software:
 ```uvicorn main:app --host 0.0.0.0 --port 8001 --reload```
 
 **Step 2: Start the downloaded Docker image (=application)** 
-localhost:8000
-```shiny run shinysearch/app.py```
+```python
+shiny run shinysearch/app.py
+```
+The app will run at localhost:8000
 
 ## Deployment using Docker <a name = "deployment2"></a>
   
