@@ -1,11 +1,9 @@
-FROM python:3.10
+FROM python:3.11
 
-# Copy using poetry.lock* in case it doesn't exist yet
 COPY . .
 
 RUN pip install -r requirements.txt
 
-# CMD ["tail", "-f", "/dev/null"]
-#CMD ["streamlit", "run", "gui.py", "--theme.base=dark"]
+CMD ["nohup", "shiny", "run", "shinysearch/app.py"]
 
-ENTRYPOINT ["uvicorn", "api.api:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
+ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
