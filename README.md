@@ -60,23 +60,13 @@ The app will run at localhost:8000.
   
 ## ⛏️ TO DO <a name = "todo"></a>
 ## Issues <a name = "issues"></a>
-- Download prompt report multi-file
+- 
   
 ## Features <a name = "features"></a>
-- Database for token tracking
-- https://github.com/momper14/alephAlphaClient
-- Audio recording
-- Hate blocker
-- Improve the summarization prompt (rejected to be integrated in new application for large text corpus summarization)
-- Included other LLM API, maybe cohere
-- Adding chatbot functionality
-- https://github.com/daattali/shinyscreenshot/
-- Test framework for document processing
+- 
   
 ## Non-functionals <a name = "nfrs"></a>
 - Tests
-- Prompt Catalogue
-- Websocket (for the audio transcription display on the front-end)
 
 ## ⛏️ Licensing Overview <a name = "licensingoverview"></a>
 
@@ -96,4 +86,4 @@ The app will run at localhost:8000.
 | <img src="https://raw.githubusercontent.com/docker/compose/main/logo.png" width="25"> [Docker Compose](https://github.com/docker/compose) | 2.21.0 | Apache-2.0 |
 
 ## 🎉 Notes <a name = "notes"></a>
-- renv::snapshot(type = all)
+- 
