@@ -12,3 +12,5 @@ def generate(body: Body):
     Send user request to IBM discovery to find most relevant text passages.
     """
     return discovery_query(body.nlq)
+
+#uvicorn main:app --port 8001
