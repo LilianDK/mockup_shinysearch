@@ -46,35 +46,13 @@ What things you need to run the software:
 
 
 # Front-End
-localhost:8000
-```shiny run shinysearch/app.py```
-
-```uvicorn main:app --host 0.0.0.0 --port 8001 --reload```
-
-In the following we describe how you can deploy this application with a Docker image.
-
-| Pros     | Cons    | 
-| -------- | ------- |
-| Time efficient set-up | No visual configuration possible |
-| No messing around with the console | No other configuration of inputs possible |
-
-**Step 0: Open your console**
 
 **Step 1: Download the Docker image (=application)**
-```
-docker pull schiggy89/llm-playground:<<VERSION NUMBER>>
-```
+```uvicorn main:app --host 0.0.0.0 --port 8001 --reload```
 
 **Step 2: Start the downloaded Docker image (=application)** 
-```
-docker run -p 3838:3838 --rm schiggy89/llm-playground:<<VERSION NUMBER>>
-```
-This step might take a while until it startet.
-
-
-**Step 3: Start a browser and enter "localhost:3838" to open the application** 
-
-**Step 4: Enter your token on the left. You do not need a USER ID (because this is for other enterprise purposes).** 
+localhost:8000
+```shiny run shinysearch/app.py```
 
 ## Deployment using Docker <a name = "deployment2"></a>
   
