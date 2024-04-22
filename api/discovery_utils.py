@@ -25,7 +25,6 @@ discovery.set_disable_ssl_verification(True)
 
 counter = 2
 
-
 def get_collections():
     ## List Collections ##
     collections = discovery.list_collections(
@@ -76,13 +75,19 @@ def discovery_query(nlq: str, counter=counter):
 
     return query_results
 
+## Checking Datastructure ##
+#query_results_discovery = discovery_query("")
+#test = query_results_discovery["matching_results"]
+#test = query_results_discovery["results"]
+#test
 
-# query_results_discovery = discovery_query("welche baumaßnahmen wurden im januar 2024 durchgeführt?")
-# print()
+# Get a list of all documents in respective collection
+#docs = discovery.list_documents(project_id=discovery_project_id, collection_id=collection_id).get_result()
+#print(docs["documents"][0])
 
+#doclist = pd.DataFrame.from_dict(docs["documents"])
 
-# docs = discovery.list_documents(project_id=discovery_project_id, collection_id=collection_id, count=200)
-# print(len(docs))
+#document = discovery.get_document(project_id=discovery_project_id, collection_id=collection_id, document_id="XXX").get_result()
 
-# entity_list = discovery.get_enrichment(project_id=discovery_project_id, enrichment_id='701db916-fc83-57ab-0000-00000000001e')
-# keyword_list = discovery.get_enrichment(project_id=discovery_project_id, enrichment_id='701db916-fc83-57ab-0000-000000000018')
+#entity_list = discovery.get_enrichment(project_id=discovery_project_id, enrichment_id='701db916-fc83-57ab-0000-00000000001e').get_result()
+#keyword_list = discovery.get_enrichment(project_id=discovery_project_id, enrichment_id='701db916-fc83-57ab-0000-000000000018').get_result()
