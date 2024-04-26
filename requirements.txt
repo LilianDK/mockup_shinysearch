@@ -4,9 +4,4 @@ fastapi
 shiny
 ibm-watson>=7.0.0
 matplotlib
-langchain 
-langchain-elasticsearch 
-elasticsearch 
-eland==8.12.1
-jq
-https://github.com/elastic/elasticsearch-labs/blob/main/notebooks/document-chunking/with-langchain-splitters.ipynb
+pytz

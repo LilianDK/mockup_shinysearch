@@ -1,0 +1,33 @@
+    mappings={
+        # Metadata
+        "properties": {
+        "content": {"type": "text"},
+        "name": {"type": "text"},
+        "url": {"type": "text"},
+        "created_on": {"type": "date"},
+        "updated_at": {"type": "date"},
+        "category": {"type": "text"},
+        "rolePermissions": {"type": "text"},
+        # Vector
+        "text_chunk": {
+            "properties": {
+                "passages": {
+                "type": "nested",
+                    "properties": {
+                        "vector": {
+                            "properties": {
+                                "predicted_value": {
+                                "type": "dense_vector",
+                                "index": True,
+                                "dims": 384,
+                                "similarity": "dot_product",
+                                }
+                            }
+                        }
+                    },
+                }
+            },
+        }
+    },
+}
+
