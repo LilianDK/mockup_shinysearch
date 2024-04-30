@@ -34,7 +34,7 @@ counter = 3
 def get_collections():
     ## List Collections ##
     collections = discovery.list_collections(
-        project_id=discovery_project_id_2
+        project_id=discovery_project_id_1
     ).get_result()
     print("####################################### LIST COLLECTIONS")
     print(json.dumps(collections, indent=2))
@@ -82,7 +82,8 @@ def discovery_query(nlq: str, p_id=discovery_project_id_1, c_id=discovery_collec
     return query_results
 
 # Query design for panel B front-end without SDU preprocessing
-def discovery_query_2(nlq: str, state: str, p_id=discovery_project_id_2, c_id=[discovery_collection_id_2_1, discovery_collection_id_2_2], counter=counter):
+
+def discovery_query_2(nlq: str, state: str, p_id=discovery_project_id_1, c_id=[discovery_collection_id_2_1, discovery_collection_id_2_2], counter=counter):
     query_results = discovery.query(
         project_id=p_id,
         collection_ids=c_id,
@@ -99,7 +100,7 @@ def discovery_query_2(nlq: str, state: str, p_id=discovery_project_id_2, c_id=[d
         # suggested_refinements: 'QueryLargeSuggestedRefinements' = None,
         passages=QueryLargePassages(enabled=True, fields=["text"], per_document=True, max_per_document=2, characters=1000),
         # similar: 'QueryLargeSimilar' = None,
-        count=counter,
+        count=count,
     ).get_result()
 
     print("starting selection!")
@@ -131,13 +132,16 @@ def discovery_query_3(nlq: str, state: str, p_id=discovery_project_id_2, c_id=[d
     return query_results
 
 ## Checking Datastructure ##
+#query_results_discovery = discovery_query_2(nlq="", state="")
+#query_results_discovery
 #query_results_discovery = discovery_query_2(nlq="Baumaßnahmen im Januar 2024", state="Germany")
 #test = query_results_discovery["matching_results"]
 #test = query_results_discovery["results"]
 #test
 
 # Get a list of all documents in respective collection
-#docs = discovery.list_documents(project_id=discovery_project_id, collection_id=collection_id).get_result()
+#docs = discovery.list_documents(project_id=discovery_project_id_1, collection_id="98d1855e-d4f8-0154-0000-018ef0115216").get_result()
+
 #print(docs["documents"][0])
 
 #doclist = pd.DataFrame.from_dict(docs["documents"])
@@ -152,3 +156,18 @@ def discovery_query_3(nlq: str, state: str, p_id=discovery_project_id_2, c_id=[d
 #test = query_results_discovery["results"][0]["document_passages"][0]["passage_text"]
 #test
 #df = response_data["results"][0]["document_passages"][0]["passage_text"]
+
+## Export ##
+
+#export = discovery.query(
+#        project_id="XXXXX",
+#        collection_ids=["XXXXX"],
+#        filter="document_id::XXXXX",
+#        # offset: int = None,
+#        # count: int = None,
+#).get_result()
+
+
+#with open("json.json", encoding="utf8", mode="w") as json_file:
+#    json.dump(export, json_file, indent=2, ensure_ascii=False)
+
